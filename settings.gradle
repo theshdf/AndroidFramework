@@ -1,1 +1,1 @@
-include ':javamvc', ':kotlin_mvc'
+include ':javamvc', ':kotlin_mvc', ':java_mvp', ':java_mvvm', ':kotlin_aac', ':java_aac'

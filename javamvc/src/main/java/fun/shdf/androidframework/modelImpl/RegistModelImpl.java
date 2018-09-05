@@ -1,8 +1,4 @@
 package fun.shdf.androidframework.modelImpl;
-
-import android.net.nsd.NsdManager;
-import android.util.Log;
-
 import fun.shdf.androidframework.Base.BaseHttpInterface;
 import fun.shdf.androidframework.Base.BaseResponse;
 import fun.shdf.androidframework.http.HttpRequest;

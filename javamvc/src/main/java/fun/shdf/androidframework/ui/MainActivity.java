@@ -11,7 +11,7 @@ import fun.shdf.androidframework.R;
  * exp:
  **/
 public class MainActivity extends BaseActivity<BaseResponse> {
-    TextView tv;
+    //TextView tv;
     @Override
     public int getLayoutId() {
         return R.layout.activity_main;
@@ -19,7 +19,7 @@ public class MainActivity extends BaseActivity<BaseResponse> {
 
     @Override
     public void initView() {
-        tv = this.findViewById(R.id.tv_content);
+     //   tv = this.findViewById(R.id.tv_content);
     }
 
     @Override
