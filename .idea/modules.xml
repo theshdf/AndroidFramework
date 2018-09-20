@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AndroidFramework.iml" filepath="$PROJECT_DIR$/AndroidFramework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java_aac/java_aac.iml" filepath="$PROJECT_DIR$/java_aac/java_aac.iml" />
       <module fileurl="file://$PROJECT_DIR$/java_mvp/java_mvp.iml" filepath="$PROJECT_DIR$/java_mvp/java_mvp.iml" />
       <module fileurl="file://$PROJECT_DIR$/java_mvvm/java_mvvm.iml" filepath="$PROJECT_DIR$/java_mvvm/java_mvvm.iml" />
       <module fileurl="file://$PROJECT_DIR$/javamvc/javamvc.iml" filepath="$PROJECT_DIR$/javamvc/javamvc.iml" />
