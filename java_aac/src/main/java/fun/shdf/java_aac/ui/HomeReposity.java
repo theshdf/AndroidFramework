@@ -22,12 +22,11 @@ public class HomeReposity extends BaseReposity {
      * @param password
      */
     public void getHomeData(String username, String password, final CallBack callBack){
+
         apiService.login(username,password)
         .subscribeOn(Schedulers.io())
         .observeOn(AndroidSchedulers.mainThread())
         .subscribe(new BaseObserver<String>() {
-
-
             @Override
             public void onSuccessData(BaseResponse<String> data) {
                 callBack.onSuccessData(data);

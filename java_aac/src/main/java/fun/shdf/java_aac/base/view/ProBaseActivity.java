@@ -1,9 +1,13 @@
 package fun.shdf.java_aac.base.view;
 
+import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
+import android.text.TextUtils;
 import android.util.Log;
+import android.widget.Toast;
+
+import fun.shdf.java_aac.AppConstants;
 import fun.shdf.java_aac.base.viewmodel.BaseViewModel;
-import fun.shdf.java_aac.ui.HomeViewModel;
 import fun.shdf.java_aac.utils.GenericUtil;
 
 /**
@@ -17,16 +21,45 @@ public abstract class ProBaseActivity<T extends BaseViewModel> extends BaseActiv
 
     protected T mViewModel;
 
+    @Override
+    protected void initOther() {
+        initInstance();
+    }
 
     public void initInstance(){
         try {
             mViewModel = ViewModelProviders.of(this).get((Class<T>) GenericUtil.getInstance(this,0));
+            mViewModel.state.observe(this,mObserver);
         }
         catch (Exception e){
-            Log.d("TAG","aaa"+e.getMessage());
+            Log.d("TAG",e.getMessage());
         }
-
-
     }
+
+    /**
+     * 显示返回信息
+     */
+    private Observer<String> mObserver = state -> {
+           if(AppConstants.UNKNOW_HOST.equals(state)){
+
+           }
+           else if(AppConstants.CONNECT_EXCEPTION.equals(state)){
+
+           }
+           else if(AppConstants.HTTP_ECEPTION.equals(state)){
+
+           }
+           else if(AppConstants.JSON_PARSE.equals(state)){
+
+           }
+           else if(AppConstants.SOCKET_TIMEOUT.equals(state)){
+           }
+           else if(!TextUtils.isEmpty(state)){
+               Toast.makeText(this,state,Toast.LENGTH_SHORT).show();
+           }
+           else if(TextUtils.isEmpty(state)){
+               Toast.makeText(this,"不能为空啊",Toast.LENGTH_SHORT).show();
+           }
+    };
 
 }

@@ -1,13 +1,13 @@
-package fun.shdf.java_aac.ui;
+package fun.shdf.java_aac.utils;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.TextView;
+
 import java.text.SimpleDateFormat;
 
 import fun.shdf.java_aac.R;
-import fun.shdf.java_aac.utils.CrashModel;
 
 /**
  * author : ChenPeng

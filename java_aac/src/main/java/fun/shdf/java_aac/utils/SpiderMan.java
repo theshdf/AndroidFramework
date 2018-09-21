@@ -6,7 +6,6 @@ import android.content.Intent;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.Date;
-import fun.shdf.java_aac.ui.CrashActivity;
 
 public class SpiderMan implements Thread.UncaughtExceptionHandler {
 

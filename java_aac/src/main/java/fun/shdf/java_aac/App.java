@@ -3,7 +3,6 @@ package fun.shdf.java_aac;
 import android.app.Application;
 import android.content.Context;
 
-import fun.shdf.java_aac.utils.CrashModel;
 import fun.shdf.java_aac.utils.SpiderMan;
 
 /**
@@ -13,6 +12,7 @@ import fun.shdf.java_aac.utils.SpiderMan;
  * exp:
  **/
 public class App extends Application {
+
     private static Context context;
 
     @Override

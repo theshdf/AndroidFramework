@@ -5,6 +5,8 @@ import org.json.JSONException;
 import java.net.ConnectException;
 import java.net.SocketTimeoutException;
 import java.net.UnknownHostException;
+
+import fun.shdf.java_aac.AppConstants;
 import fun.shdf.java_aac.base.BaseResponse;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
@@ -47,16 +49,16 @@ public abstract class BaseObserver<T> implements Observer<BaseResponse<T>> {
     public void onError(Throwable e) {
         String message = null;
         if (e instanceof UnknownHostException) {
-            message = "没有网络";
+            message = AppConstants.UNKNOW_HOST;
         } else if (e instanceof HttpException) {
-            message = "网络错误";
+            message = AppConstants.HTTP_ECEPTION;
         } else if (e instanceof SocketTimeoutException) {
-            message = "网络连接超时";
+            message = AppConstants.SOCKET_TIMEOUT;
         } else if (e instanceof JsonParseException
                 || e instanceof JSONException) {
-            message = "解析错误";
+            message = AppConstants.JSON_PARSE;
         } else if (e instanceof ConnectException) {
-            message = "连接失败";
+            message = AppConstants.CONNECT_EXCEPTION;
         }
         onFailure(message);
     }

@@ -40,7 +40,8 @@ public abstract class BaseActivity extends AppCompatActivity{
         initIntent();
         initView();
         initListener();
-        initData();
+        initOther();
+        initData(savedInstanceState);
     }
 
     /**
@@ -90,9 +91,14 @@ public abstract class BaseActivity extends AppCompatActivity{
     protected  abstract void initListener();
 
     /**
+     * 在初始化数居前用来初始化
+     */
+    protected abstract void initOther();
+
+    /**
      * 初始化view展示的数据
      */
-    protected abstract void initData();
+    protected abstract void initData(Bundle bundle);
 
     /**
      * =============== set==============

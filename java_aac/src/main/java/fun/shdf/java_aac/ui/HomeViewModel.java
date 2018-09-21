@@ -4,7 +4,6 @@ import android.app.Application;
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
 import android.support.annotation.NonNull;
-import android.text.TextUtils;
 
 import fun.shdf.java_aac.base.CallBack;
 import fun.shdf.java_aac.base.viewmodel.BaseViewModel;
@@ -22,11 +21,12 @@ public class HomeViewModel extends BaseViewModel<HomeReposity>{
     /**
      * 可以引入application，并且完成初始化工作
      *
-
+     * @param application
      */
-    public HomeViewModel() {
-
+    public HomeViewModel(@NonNull Application application) {
+        super(application);
     }
+
 
     /**
      *
@@ -40,26 +40,22 @@ public class HomeViewModel extends BaseViewModel<HomeReposity>{
     }
 
     public void getHomeData(String username,String password){
+
         mReposity.getHomeData(username, password, new CallBack<String>() {
 
             @Override
             public void onSuccessData(String data) {
-                homeData.postValue("haha");
+                homeData.postValue(data);
             }
 
             @Override
             public void onSuccessMsg(String msg) {
-                homeData.postValue("heihei");
+                state.postValue(msg);
             }
 
             @Override
             public void onFailer(String msg) {
-                if(TextUtils.isEmpty(msg)){
-                    if(TextUtils.isEmpty(msg)){
-                        homeData.postValue("lelele");
-                    }
-                }
-
+                state.postValue(msg);
             }
         });
     }
