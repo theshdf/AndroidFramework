@@ -1,4 +1,8 @@
-package fun.shdf.java_aac.Base.model;
+package fun.shdf.java_aac.base.model;
+
+import fun.shdf.java_aac.api.ApiService;
+import fun.shdf.java_aac.http.RetrofitUtil;
+import retrofit2.Retrofit;
 
 /**
  * code-time: 2018/9/20 16:09
@@ -8,5 +12,10 @@ package fun.shdf.java_aac.Base.model;
  **/
 public abstract class BaseReposity {
 
+    protected ApiService apiService;
+
+     public BaseReposity(){
+        apiService = RetrofitUtil.getApiService();
+    }
 
 }

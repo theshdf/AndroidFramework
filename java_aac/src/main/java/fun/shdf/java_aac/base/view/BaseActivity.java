@@ -1,4 +1,4 @@
-package fun.shdf.java_aac.Base.view;
+package fun.shdf.java_aac.base.view;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.annotation.Nullable;

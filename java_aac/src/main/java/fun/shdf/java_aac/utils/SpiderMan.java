@@ -1,4 +1,4 @@
-package me.shdf.baseandroid.util;
+package fun.shdf.java_aac.utils;
 
 import android.content.Context;
 import android.content.Intent;
@@ -6,8 +6,7 @@ import android.content.Intent;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.Date;
-
-import me.shdf.baseandroid.ui.main.activity.CrashActivity;
+import fun.shdf.java_aac.ui.CrashActivity;
 
 public class SpiderMan implements Thread.UncaughtExceptionHandler {
 

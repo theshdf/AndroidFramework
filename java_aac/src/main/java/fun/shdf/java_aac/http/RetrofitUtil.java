@@ -1,4 +1,4 @@
-package me.shdf.baseandroid.http;
+package fun.shdf.java_aac.http;
 
 import android.util.Log;
 
@@ -7,10 +7,10 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 import java.util.concurrent.TimeUnit;
 
-import me.shdf.baseandroid.app.AppApplication;
-import me.shdf.baseandroid.api.ApiConstants;
-import me.shdf.baseandroid.api.ApiService;
-import me.shdf.baseandroid.util.NetUtil;
+import fun.shdf.java_aac.App;
+import fun.shdf.java_aac.api.ApiConstant;
+import fun.shdf.java_aac.api.ApiService;
+import fun.shdf.java_aac.utils.NetUtil;
 import okhttp3.Cache;
 import okhttp3.CacheControl;
 import okhttp3.Interceptor;
@@ -49,7 +49,7 @@ public class RetrofitUtil {
                     @Override
                     public Response intercept(Chain chain) throws IOException {
                         //缓存文件夹
-                        File cacheFile = new File(AppApplication.getContext().getExternalCacheDir().toString(), "cache");
+                        File cacheFile = new File(App.getContext().getExternalCacheDir().toString(), "cache");
                         //缓存大小为10M
                         int cacheSize = 10 * 1024 * 1024;
                         //创建缓存对象
@@ -113,7 +113,7 @@ public class RetrofitUtil {
                 if (apiService == null) {
                     apiService = new Retrofit
                             .Builder()
-                            .baseUrl(ApiConstants.TIANYUJIA)
+                            .baseUrl(ApiConstant.URL)
                             .client(httpClient)
                             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                             .addConverterFactory(GsonConverterFactory.create())

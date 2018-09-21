@@ -4,7 +4,26 @@ package fun.shdf.java_aac.base;
  * code-time: 2018/9/21 14:32
  * code-author: by shdf
  * coder-wechat: zcm656025633
- * exp:
+ * exp:用于viewmodel和model之间的回调
  **/
-public class CallBack {
+public interface CallBack<T> {
+
+    /**
+     *
+     * @param data
+     */
+    void onSuccessData(T data);
+
+    /**
+     *
+     * @param msg
+     */
+    void onSuccessMsg(String msg);
+
+    /**
+     *
+     * @param msg
+     */
+    void onFailer(String msg);
+
 }

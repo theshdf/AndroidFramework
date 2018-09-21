@@ -1,4 +1,4 @@
-package me.shdf.baseandroid.util;
+package fun.shdf.java_aac.utils;
 
 import android.os.Build;
 import android.os.Parcel;

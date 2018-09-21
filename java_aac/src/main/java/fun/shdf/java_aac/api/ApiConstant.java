@@ -7,4 +7,11 @@ package fun.shdf.java_aac.api;
  * exp:
  **/
 public class ApiConstant {
+    //域名地址
+    public static final String URL = "http://www.wanandroid.com/";
+
+    //文件名路径
+    public static final String LOGIN = "user/login";
+
+    public static final int SERVER_CODE = 1;
 }
