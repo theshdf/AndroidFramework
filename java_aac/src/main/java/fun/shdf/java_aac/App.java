@@ -3,6 +3,9 @@ package fun.shdf.java_aac;
 import android.app.Application;
 import android.content.Context;
 
+import com.orhanobut.logger.AndroidLogAdapter;
+import com.orhanobut.logger.Logger;
+
 import fun.shdf.java_aac.utils.SpiderMan;
 
 /**
@@ -19,7 +22,7 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
         context = getApplicationContext();
-
+        Logger.addLogAdapter(new AndroidLogAdapter());
         //todo 显示异常信息页面
         SpiderMan.getInstance()
                 .init(this)

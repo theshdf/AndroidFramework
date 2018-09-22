@@ -7,6 +7,8 @@ package fun.shdf.java_aac;
  **/
 public class AppConstants {
 
+    public static final long TIME_OUT = 30;
+
     //todo 定义网络状态码
     public static final String UNKNOW_HOST = "UNKNOW_HOST";
 
