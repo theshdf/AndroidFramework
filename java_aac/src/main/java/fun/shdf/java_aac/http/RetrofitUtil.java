@@ -27,6 +27,7 @@ public class RetrofitUtil {
     private ApiService apiService;
 
     private static RetrofitUtil mRetrofitUtil;
+
     private BasicParamsInterceptor basicParamsInterceptor;
 
     @SuppressLint("CheckResult")

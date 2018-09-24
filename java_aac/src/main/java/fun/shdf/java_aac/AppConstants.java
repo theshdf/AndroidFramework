@@ -5,7 +5,7 @@ package fun.shdf.java_aac;
  * wechat：zcm656025633
  * exp：
  **/
-public class AppConstants {
+public  class AppConstants {
 
     public static final long TIME_OUT = 30;
 
