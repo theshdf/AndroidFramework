@@ -6,6 +6,7 @@ import fun.shdf.java_aac.AppConstants;
 import fun.shdf.java_aac.api.ApiConstant;
 import fun.shdf.java_aac.api.ApiService;
 import io.reactivex.Observable;
+import kotlin.jvm.Volatile;
 import okhttp3.Cache;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -20,13 +21,11 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 public class RetrofitUtil {
 
-    private static Cache cache = null;
-
     private static OkHttpClient httpClient;
 
     private ApiService apiService;
 
-    private static RetrofitUtil mRetrofitUtil;
+    private volatile static  RetrofitUtil  mRetrofitUtil;//防止指令重排序
 
     private BasicParamsInterceptor basicParamsInterceptor;
 
