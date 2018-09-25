@@ -16,7 +16,6 @@ public class HomeActivity extends ProBaseActivity<HomeViewModel> {
 
     @Override
     protected void initIntent() {
-
     }
 
     @Override

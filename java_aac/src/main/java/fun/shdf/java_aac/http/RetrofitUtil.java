@@ -73,7 +73,6 @@ public class RetrofitUtil {
         return apiService;
     }
 
-
     public void initOkhttp() {
         basicParamsInterceptor = new BasicParamsInterceptor.Builder()
                 .addParam("from", "android") //添加公共参数到 post 请求体
